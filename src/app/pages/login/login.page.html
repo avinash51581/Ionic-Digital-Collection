@@ -1,0 +1,39 @@
+<ion-content>
+  <div class="logo-section">
+    <div class="logo-section_wrapper">
+      <img class="logo-section_logo" src="assets/images/logo/login.png" />
+      <h3 class="logo-section_title" color="light">LOGIN</h3>
+    </div>
+  </div>
+
+  <form [formGroup]="loginForm">
+    <ion-item lines="full">
+      <ion-label position="floating" color="light">Email</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating" color="light">Password</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item> <br><br>
+
+    <ion-button type="button" [disabled]="!loginForm.valid" shape="round" color="light" expand="block" fill="outline"
+      (click)="onSubmit()">LOGIN</ion-button><br>
+
+
+    <ion-row>
+      <ion-col size="1">
+      </ion-col>
+      <ion-col size="6">
+        <ion-label color="light">Forgot password?</ion-label>
+      </ion-col>
+      <ion-col size="1">
+      </ion-col>
+      <ion-col size="3">
+        <ion-label color="light" (click)="moveToRegister()" title="Signup">or Sign up</ion-label>
+      </ion-col>
+      <ion-col size="1">
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

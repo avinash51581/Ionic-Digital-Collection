@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Maharashtrian Festivals</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="isDataAvailable">
+    <ion-item *ngFor="let item of festivalsList">
+      <ion-label>{{item.name}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

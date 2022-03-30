@@ -1,0 +1,7 @@
+{
+  "name": "Digital-Collection",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
